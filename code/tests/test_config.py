@@ -1,13 +1,14 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-from unittest import TestCase
+from unittest import TestCase, skip
 from .. import config
 from ..config import read_conf_dir, deepupdate
 
 
 class ConfigTestCase(TestCase):
 
+    @skip("")
     def test_init(self):
         """ it should initializes global conf variables """
         global_vars = ["manager", "jobs", "inmemory", "log", "levCache", "jobs_list"]
